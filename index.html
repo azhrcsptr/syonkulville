@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>onriwishville</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="phone" id="phone">
+  <div class="island" id="island" title="Kunci layar"></div>
+  <div class="status" id="status">
+    <span id="sbTime">9:41</span>
+    <span class="r">
+      <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+      <svg width="26" height="12" viewBox="0 0 26 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3.5" stroke="currentColor" opacity=".5"/><rect x="2" y="2" width="16" height="8" rx="2" fill="currentColor"/><rect x="24" y="4" width="2" height="4" rx="1" fill="currentColor" opacity=".5"/></svg>
+    </span>
+  </div>
+
+  <!-- LOCK -->
+  <div class="lock" id="lock">
+    <div class="torch-glow"></div>
+    <div class="brand" id="brand"></div>
+    <div class="date" id="lkDate"></div>
+    <div class="time" id="lkTime"></div>
+    <div class="lk-notifs" id="lkNotifs"></div>
+    <button class="qbtn l" id="torch" aria-label="Senter">🔦</button>
+    <button class="qbtn r" id="cam" aria-label="Kamera">📷</button>
+    <div class="hint">Geser ke atas atau klik untuk membuka</div>
+  </div>
+
+  <!-- PASSCODE -->
+  <div class="pass" id="pass">
+    <h3>Masukkan Kode Sandi</h3>
+    <div class="dots" id="pdots"></div>
+    <div class="err" id="passErr"></div>
+    <div class="keys" id="keys"></div>
+  </div>
+
+  <!-- HOME -->
+  <div class="home" id="home">
+    <div class="widget">
+      <div class="hi" id="hiText">Halo,</div>
+      <div class="big" id="hiTime"></div>
+      <div class="sm" id="hiDate"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="dock" id="dock"></div>
+  </div>
+
+  <!-- INSTAGRAM -->
+  <div class="app ig" id="app-ig" data-bar="dark">
+    <div class="view">
+      <div class="ig-head">
+        <div class="ig-logo" id="igLogo">wishgram</div>
+        <div class="acts">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </div>
+      </div>
+      <div class="scroll" id="igScroll"></div>
+      <div class="ig-tabs" id="igTabs">
+        <button data-tab="home" class="on" aria-label="Beranda"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></button>
+        <button data-tab="search" aria-label="Cari"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+        <button data-tab="add" aria-label="Buat"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></button>
+        <button data-tab="reels" aria-label="Reels"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M10 8.5l5 3.5-5 3.5z"/></svg></button>
+        <button data-tab="profile" aria-label="Profil"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></button>
+      </div>
+    </div>
+    <div class="sv" id="sv">
+      <div class="sv-bars" id="svBars"></div>
+      <div class="sv-user"><div id="svAv"></div><b id="svName"></b><button id="svClose" aria-label="Tutup">✕</button></div>
+      <div class="sv-stage" id="svStage"></div>
+      <div class="sv-tap l" id="svL"></div>
+      <div class="sv-tap r" id="svR"></div>
+    </div>
+  </div>
+
+  <!-- PESAN -->
+  <div class="app" id="app-msg" data-bar="dark">
+    <div class="view list" id="mList">
+      <div class="m-title">Pesan</div>
+      <div class="scroll" id="convList"></div>
+    </div>
+    <div class="view thread" id="mThread" style="transform:translateX(100%)">
+      <div class="t-head">
+        <button class="back" id="mBack"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="#007aff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2L2 10l8 8"/></svg> Pesan</button>
+        <div class="who"><div id="thAv"></div><span id="thName"></span></div>
+        <div class="sp"></div>
+      </div>
+      <div class="bubbles" id="bubbles"></div>
+      <form class="composer" id="composer">
+        <input id="msgInput" placeholder="iMessage" autocomplete="off">
+        <button type="submit" aria-label="Kirim">↑</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CATATAN -->
+  <div class="app notes" id="app-notes" data-bar="dark">
+    <div class="view" id="nList">
+      <div class="n-head"><div class="t">Catatan</div><button class="n-add" id="nAdd" aria-label="Catatan baru">＋</button></div>
+      <div class="scroll" id="nCards"></div>
+    </div>
+    <div class="view" id="nEdit" style="transform:translateX(100%)">
+      <div class="n-top"><button id="nBack">‹ Catatan</button><button id="nDel" aria-label="Hapus">🗑</button></div>
+      <div class="n-date" id="nDate"></div>
+      <textarea class="n-edit" id="nText" placeholder="Tulis sesuatu..."></textarea>
+    </div>
+  </div>
+
+  <!-- FOTO -->
+  <div class="app" id="app-photos" data-bar="dark">
+    <div class="view">
+      <div class="ph-head"><div class="ph-title">Foto</div><div class="ph-sub" id="phSub"></div></div>
+      <div class="scroll"><div class="pgrid" id="pgrid"></div></div>
+    </div>
+    <div class="viewer" id="viewer">
+      <button class="x" id="vClose" aria-label="Tutup">✕</button>
+      <div class="count" id="vCount"></div>
+      <div class="vstage" id="vStage"></div>
+      <button class="nav l" id="vPrev" aria-label="Sebelumnya">‹</button>
+      <button class="nav r" id="vNext" aria-label="Berikutnya">›</button>
+      <div class="cap"><b id="vCap"></b><span id="vDate"></span></div>
+    </div>
+  </div>
+
+  <!-- MUSIK -->
+  <div class="app music" id="app-music" data-bar="light">
+    <div class="view">
+      <div class="mu-title">Musik</div>
+      <div class="mu-sub" id="muSub"></div>
+      <div class="seg mu" id="muSeg" hidden>
+        <button class="on" data-t="lib">Koleksi</button>
+        <button data-t="pl">Playlist</button>
+      </div>
+      <div class="scroll" id="trkList"></div>
+      <div class="plwrap" id="plWrap" hidden></div>
+    </div>
+    <div class="mini" id="mini">
+      <div class="cv" id="miniCv"></div>
+      <div class="tx"><b id="miniT"></b><span id="miniA"></span></div>
+      <button id="miniPlay" aria-label="Putar">▶</button>
+      <button id="miniNext" aria-label="Berikutnya">⏭</button>
+    </div>
+    <div class="player" id="player">
+      <button class="pl-close" id="plClose" aria-label="Tutup">⌄</button>
+      <div class="cv pl-cover" id="plCover"></div>
+      <div class="pl-info"><b id="plT"></b><span id="plA"></span></div>
+      <input type="range" id="seek" min="0" max="100" value="0" step="0.1">
+      <div class="times"><span id="tCur">0:00</span><span id="tDur">0:00</span></div>
+      <div class="ctrls">
+        <button id="rep" aria-label="Ulangi">🔁</button>
+        <button id="prev" aria-label="Sebelumnya">⏮</button>
+        <button id="play" class="big" aria-label="Putar">▶</button>
+        <button id="next" aria-label="Berikutnya">⏭</button>
+        <button id="shuf" aria-label="Acak">🔀</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TELEPON -->
+  <div class="app" id="app-phone" data-bar="dark">
+    <div class="view">
+      <div class="pa-head">
+        <button class="edit">Ubah</button>
+        <div class="seg" id="callSeg"><button class="on" data-f="all">Semua</button><button data-f="missed">Tak terjawab</button></div>
+        <span style="width:44px"></span>
+      </div>
+      <div class="pa-title">Terbaru</div>
+      <div class="scroll" id="callList"></div>
+      <div class="pa-tabs">
+        <div><i>⭐</i>Favorit</div><div class="on"><i>🕘</i>Terbaru</div><div><i>👤</i>Kontak</div><div><i>🔢</i>Papan Tombol</div><div><i>📼</i>Pesan Suara</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PETA -->
+  <div class="app" id="app-maps" data-bar="dark">
+    <div class="view mapview">
+      <iframe id="mapFrame" title="Peta Seoul" loading="lazy"></iframe>
+      <div class="map-q">🔍 <span id="mapQ">Seoul</span></div>
+      <div class="sheet" id="sheet">
+        <div class="grab" id="grab"></div>
+        <h4>Seoul, Korea Selatan</h4>
+        <div class="plist" id="plist"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner" id="banner">
+    <div id="bnAv"></div>
+    <div class="tx"><b id="bnName"></b><span id="bnText"></span></div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <div class="indicator" id="indicator"></div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
